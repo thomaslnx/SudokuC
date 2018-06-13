@@ -45,13 +45,20 @@ void printPuzzle(int ** puzzle)
     for (i =0 ; i < 9 ; i++)
     {
 	printf("|");
+	fflush(stdout);
+	sleep(1);
 
         for (j = 0 ; j < 9 ; j++)
 	{
             printf(" %d ", puzzle[i][j]);
+	    fflush(stdout);
+	    sleep(1);
+	    
 	    if (( (j + 1) % 3) == 0)
             {
-                printf("|");
+		printf("|");
+		fflush(stdout);
+		sleep(1);
 	    }
         }
 
